@@ -49,7 +49,27 @@ Repositorio JPA para manejar persistencia de usuarios.
 - existsByEmail(email): validación en registro
 
 ---
+## 🔐 Módulo: Autenticación
 
+### DTOs (Data Transfer Objects)
+- `RegisterRequest`: recibe nombre, email y contraseña
+- `LoginRequest`: recibe email y contraseña
+- `AuthResponse`: devuelve datos del usuario autenticado y token
+
+### AuthService.java
+Lógica central del login y registro:
+- Registra usuarios codificando su contraseña
+- Verifica credenciales en login
+- Devuelve un `AuthResponse` (token aún es simulado)
+
+### AuthenticationController.java
+Rutas públicas:
+- `POST /api/auth/register`
+- `POST /api/auth/login`
+
+> ⚠️ Las pruebas desde Postman fallarán hasta configurar seguridad con Spring Security + JWT
+
+---
 ## ⚠ Estado del proyecto
 Actualmente en desarrollo.  
 Cada módulo será subido y documentado a medida que se construya.
