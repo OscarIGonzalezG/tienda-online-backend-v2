@@ -70,6 +70,19 @@ Rutas públicas:
 > ⚠️ Las pruebas desde Postman fallarán hasta configurar seguridad con Spring Security + JWT
 
 ---
+
+### ✅ Seguridad – Adaptación y errores resueltos
+
+- Se creó `UserDetailsImpl` para adaptar la entidad `User` a la interfaz `UserDetails` de Spring Security.
+- Esto permitió mantener la lógica de seguridad desacoplada del modelo de dominio.
+- Se mantuvo `DaoAuthenticationProvider` (aunque esté deprecado), por claridad en la configuración.
+
+---
+💡 Nota:
+El IDE sugiere reemplazar el getter manual en `UserDetailsImpl` por `@Getter` de Lombok.  
+Se mantiene manual para mayor claridad en esta etapa del proyecto.
+
+---
 ## ⚠ Estado del proyecto
 Actualmente en desarrollo.  
 Cada módulo será subido y documentado a medida que se construya.
