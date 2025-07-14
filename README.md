@@ -83,6 +83,11 @@ El IDE sugiere reemplazar el getter manual en `UserDetailsImpl` por `@Getter` de
 Se mantiene manual para mayor claridad en esta etapa del proyecto.
 
 ---
+💡 Nota 2:
+Se detectó un error común al implementar JWT: mal uso de `SignatureAlgorithm` (escrito como `SingnatureAlgorithm`).  
+Corregirlo garantiza que el token se firme correctamente.
+
+---
 ## ⚠ Estado del proyecto
 Actualmente en desarrollo.  
 Cada módulo será subido y documentado a medida que se construya.
